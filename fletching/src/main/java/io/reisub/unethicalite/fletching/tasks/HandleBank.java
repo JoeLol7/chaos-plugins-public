@@ -27,7 +27,7 @@ public class HandleBank extends BankTask {
     }
 
     // stop if we reached the max amount of logs specified in the config, unless we're making arrows
-    if (config.amountOfLogsToUse() != -1
+    if (config.amountOfLogsToUse() != 0
         && logsWithdrawn >= config.amountOfLogsToUse()
         && config.product() != Product.ARROWS) {
       plugin.stop("Used " + config.amountOfLogsToUse() + " logs. Stopping plugin.");
